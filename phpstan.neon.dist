@@ -1,0 +1,9 @@
+parameters:
+    level: 8
+    paths:
+        - src
+    tmpDir: build/phpstan
+    # Larastan boots Testbench, whose provider manifest is a shared file. Parallel workers can
+    # race while replacing it on Windows, producing spurious access-denied failures.
+    parallel:
+        maximumNumberOfProcesses: 1
