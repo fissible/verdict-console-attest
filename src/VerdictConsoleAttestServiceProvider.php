@@ -13,6 +13,4 @@ use Illuminate\Support\ServiceProvider;
  * `EvidenceIntegrity` over attest-laravel's `ChainVerifier` — lands with its tests, and the
  * bindings belong to that change, not this one.
  */
-final class VerdictConsoleAttestServiceProvider extends ServiceProvider
-{
-}
+final class VerdictConsoleAttestServiceProvider extends ServiceProvider {}
