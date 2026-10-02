@@ -39,8 +39,8 @@ function chainedSink(?string $chain = null, ?string $resolver = null): void
 final class ScriptedGapReader implements ChainGapReader
 {
     /**
-     * @param array<string, ChainGapSummary> $summaries
-     * @param list<string> $brokenChains
+     * @param  array<string, ChainGapSummary>  $summaries
+     * @param  list<string>  $brokenChains
      */
     public function __construct(
         private readonly array $summaries = [],
@@ -64,8 +64,8 @@ final class ScriptedGapReader implements ChainGapReader
 }
 
 /**
- * @param array<string, ChainGapSummary> $summaries
- * @param list<string> $brokenChains
+ * @param  array<string, ChainGapSummary>  $summaries
+ * @param  list<string>  $brokenChains
  */
 function gapReader(array $summaries = [], bool $broken = false, array $brokenChains = []): ScriptedGapReader
 {

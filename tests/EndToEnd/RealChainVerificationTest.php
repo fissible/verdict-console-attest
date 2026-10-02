@@ -9,6 +9,7 @@ use Fissible\Attest\Signing\SodiumSigner;
 use Fissible\VerdictConsole\Contracts\EvidenceIntegrity;
 use Fissible\VerdictConsole\Integrity\ChainIntegrityState;
 use Fissible\VerdictConsole\Integrity\ChainVerificationStore;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use ParagonIE\ConstantTime\Base64;
@@ -20,7 +21,7 @@ use ParagonIE\ConstantTime\Base64;
  * chain reads verified, and a tampered one reads failed in attest's own words.
  */
 
-uses(Illuminate\Foundation\Testing\RefreshDatabase::class);
+uses(RefreshDatabase::class);
 
 const E2E_ATTEST_WRITER = 'Fissible\\Verdict\\Evidence\\AttestEvidenceRecorder';
 
