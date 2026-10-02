@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+/.github export-ignore
+/tests export-ignore
+phpstan.neon.dist export-ignore
+phpunit.xml.dist export-ignore
+testbench.yaml export-ignore
