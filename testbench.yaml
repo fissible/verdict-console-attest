@@ -1,7 +1,7 @@
 laravel: '@testbench'
 
 providers:
-  - Fissible\Attest\AttestServiceProvider
+  - Fissible\AttestLaravel\AttestServiceProvider
   - Laravel\Ai\AiServiceProvider
   - Fissible\Verdict\VerdictServiceProvider
   - Fissible\VerdictConsole\VerdictConsoleServiceProvider
