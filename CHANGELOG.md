@@ -4,6 +4,8 @@ All notable changes to Verdict Console Attest will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-10-02
+
 - **The attest-backed evidence-integrity boundary (ADR 0002 §7, verdict-console#120).** The bridge
   binds `EvidenceIntegrity` to an attest-backed provider: the console's naming, topology, and
   standing-claim rules unchanged, plus the one thing only the bridge may do — a per-chain `GapTrace`
@@ -22,3 +24,6 @@ All notable changes to Verdict Console Attest will be documented in this file.
   policy. A failure or throw on one chain never stops its neighbors; the command exits zero only
   when every chain verified. Not-applicable hosts are a successful no-op; unnameable topologies
   refuse with the boundary's own copy.
+
+[Unreleased]: https://github.com/fissible/verdict-console-attest/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/fissible/verdict-console-attest/releases/tag/v0.1.0
