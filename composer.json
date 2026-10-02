@@ -1,7 +1,16 @@
 {
   "name": "fissible/verdict-console-attest",
   "description": "Attest bridge for the Verdict Console: automated, dated chain-verification claims and gap traces on the console's evidence-integrity boundary.",
-  "keywords": ["ai", "ai-agents", "attest", "audit", "human-in-the-loop", "laravel", "tamper-evident", "verification"],
+  "keywords": [
+    "ai",
+    "ai-agents",
+    "attest",
+    "audit",
+    "human-in-the-loop",
+    "laravel",
+    "tamper-evident",
+    "verification"
+  ],
   "homepage": "https://github.com/fissible/verdict-console-attest",
   "license": "MIT",
   "authors": [
@@ -35,7 +44,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\": "tests/"
+      "Fissible\\VerdictConsoleAttest\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -46,14 +55,33 @@
     }
   },
   "scripts": {
-    "post-autoload-dump": ["@prepare"],
-    "prepare": ["@php vendor/bin/testbench package:discover --ansi"],
-    "lint": ["vendor/bin/pint"],
-    "lint:check": ["vendor/bin/pint --test"],
-    "analyse": ["vendor/bin/phpstan analyse --memory-limit=1G"],
-    "test:types": ["@php -d memory_limit=1G vendor/bin/pest --type-coverage --min=100"],
-    "test:unit": ["vendor/bin/pest"],
-    "test": ["@analyse", "@lint:check", "@test:types", "@test:unit"]
+    "post-autoload-dump": [
+      "@prepare"
+    ],
+    "prepare": [
+      "@php vendor/bin/testbench package:discover --ansi"
+    ],
+    "lint": [
+      "vendor/bin/pint"
+    ],
+    "lint:check": [
+      "vendor/bin/pint --test"
+    ],
+    "analyse": [
+      "vendor/bin/phpstan analyse --memory-limit=1G"
+    ],
+    "test:types": [
+      "@php -d memory_limit=1G vendor/bin/pest --type-coverage --min=100"
+    ],
+    "test:unit": [
+      "vendor/bin/pest"
+    ],
+    "test": [
+      "@analyse",
+      "@lint:check",
+      "@test:types",
+      "@test:unit"
+    ]
   },
   "config": {
     "sort-packages": true,
